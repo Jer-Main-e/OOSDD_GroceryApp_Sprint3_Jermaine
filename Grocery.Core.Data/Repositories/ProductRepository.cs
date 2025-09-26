@@ -41,5 +41,12 @@ namespace Grocery.Core.Data.Repositories
             product.Id = item.Id;
             return product;
         }
+
+        public List<Product> SearchNames(string searchTerm)
+        {
+            return GetAll()
+                .Where(p => p.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) && p.Stock > 0)
+                .ToList();
+        }
     }
 }

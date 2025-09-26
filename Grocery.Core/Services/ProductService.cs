@@ -37,5 +37,10 @@ namespace Grocery.Core.Services
         {
             return _productRepository.Update(item);
         }
+
+        public List<Product> SearchNames(string searchTerm)
+        {
+            return _productRepository.SearchNames(searchTerm);
+        }
     }
 }
