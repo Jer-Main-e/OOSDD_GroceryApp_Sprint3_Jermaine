@@ -29,6 +29,7 @@ namespace Grocery.App
             builder.Services.AddSingleton<IGroceryListService, GroceryListService>();
             builder.Services.AddSingleton<IGroceryListItemsService, GroceryListItemsService>();
             builder.Services.AddSingleton<IProductService, ProductService>();
+            builder.Services.AddSingleton<IUserOVService, UserOVService>();
             builder.Services.AddSingleton<IAuthService, AuthService>();
             builder.Services.AddSingleton<IClientService, ClientService>();
             builder.Services.AddSingleton<IFileSaverService, FileSaverService>();
@@ -36,12 +37,14 @@ namespace Grocery.App
             builder.Services.AddSingleton<IGroceryListRepository, GroceryListRepository>();
             builder.Services.AddSingleton<IGroceryListItemsRepository, GroceryListItemsRepository>();
             builder.Services.AddSingleton<IProductRepository, ProductRepository>();
+            builder.Services.AddSingleton<IUserOVRepository, UserOVRepository>();
             builder.Services.AddSingleton<IClientRepository, ClientRepository>();
             builder.Services.AddSingleton<GlobalViewModel>();
 
             builder.Services.AddTransient<GroceryListsView>().AddTransient<GroceryListViewModel>();
             builder.Services.AddTransient<GroceryListItemsView>().AddTransient<GroceryListItemsViewModel>();
             builder.Services.AddTransient<ProductView>().AddTransient<ProductViewModel>();
+            builder.Services.AddTransient<UserOVView>().AddTransient<UserOVViewModel>();
             builder.Services.AddTransient<ChangeColorView>().AddTransient<ChangeColorViewModel>();
             builder.Services.AddTransient<LoginView>().AddTransient<LoginViewModel>();
             return builder.Build();

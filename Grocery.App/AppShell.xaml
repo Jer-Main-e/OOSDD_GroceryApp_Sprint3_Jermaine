@@ -14,5 +14,8 @@
         <Tab Title="Producten" Icon="products.png">
             <ShellContent Title="Producten" ContentTemplate="{DataTemplate local:ProductView}" />
         </Tab>
+        <Tab Title="User Overview" Icon="user.png">
+            <ShellContent Title="User Overview" ContentTemplate="{DataTemplate local:UserOVView}" />
+        </Tab>
     </TabBar>
 </Shell>
